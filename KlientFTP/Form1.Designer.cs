@@ -153,16 +153,16 @@
             // 
             this.buttonDownload.Location = new System.Drawing.Point(52, 19);
             this.buttonDownload.Name = "buttonDownload";
-            this.buttonDownload.Size = new System.Drawing.Size(75, 23);
+            this.buttonDownload.Size = new System.Drawing.Size(75, 29);
             this.buttonDownload.TabIndex = 0;
             this.buttonDownload.Text = "Pobierz";
             this.buttonDownload.UseVisualStyleBackColor = true;
             // 
             // buttonSend
             // 
-            this.buttonSend.Location = new System.Drawing.Point(52, 58);
+            this.buttonSend.Location = new System.Drawing.Point(52, 61);
             this.buttonSend.Name = "buttonSend";
-            this.buttonSend.Size = new System.Drawing.Size(75, 23);
+            this.buttonSend.Size = new System.Drawing.Size(75, 29);
             this.buttonSend.TabIndex = 1;
             this.buttonSend.Text = "Wyślij";
             this.buttonSend.UseVisualStyleBackColor = true;
