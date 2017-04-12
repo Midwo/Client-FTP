@@ -32,15 +32,18 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBoxServer = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxLogin = new System.Windows.Forms.TextBox();
-            this.maskedTextBoxPassword = new System.Windows.Forms.MaskedTextBox();
-            this.buttonConnect = new System.Windows.Forms.Button();
             this.buttonDisconnect = new System.Windows.Forms.Button();
+            this.buttonConnect = new System.Windows.Forms.Button();
+            this.maskedTextBoxPassword = new System.Windows.Forms.MaskedTextBox();
+            this.textBoxLogin = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxServer = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonDownload = new System.Windows.Forms.Button();
+            this.buttonSend = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -77,54 +80,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Serwer FTP";
             // 
-            // groupBox2
+            // buttonDisconnect
             // 
-            this.groupBox2.Location = new System.Drawing.Point(7, 199);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 103);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Opcje";
-            // 
-            // comboBoxServer
-            // 
-            this.comboBoxServer.FormattingEnabled = true;
-            this.comboBoxServer.Location = new System.Drawing.Point(6, 19);
-            this.comboBoxServer.Name = "comboBoxServer";
-            this.comboBoxServer.Size = new System.Drawing.Size(188, 21);
-            this.comboBoxServer.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Login:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 97);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Hasło:";
-            // 
-            // textBoxLogin
-            // 
-            this.textBoxLogin.Location = new System.Drawing.Point(52, 56);
-            this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(142, 20);
-            this.textBoxLogin.TabIndex = 3;
-            // 
-            // maskedTextBoxPassword
-            // 
-            this.maskedTextBoxPassword.Location = new System.Drawing.Point(52, 94);
-            this.maskedTextBoxPassword.Name = "maskedTextBoxPassword";
-            this.maskedTextBoxPassword.Size = new System.Drawing.Size(142, 20);
-            this.maskedTextBoxPassword.TabIndex = 4;
+            this.buttonDisconnect.Location = new System.Drawing.Point(119, 131);
+            this.buttonDisconnect.Name = "buttonDisconnect";
+            this.buttonDisconnect.Size = new System.Drawing.Size(75, 23);
+            this.buttonDisconnect.TabIndex = 6;
+            this.buttonDisconnect.Text = "Przerwij";
+            this.buttonDisconnect.UseVisualStyleBackColor = true;
             // 
             // buttonConnect
             // 
@@ -135,14 +98,74 @@
             this.buttonConnect.Text = "Połącz";
             this.buttonConnect.UseVisualStyleBackColor = true;
             // 
-            // buttonDisconnect
+            // maskedTextBoxPassword
             // 
-            this.buttonDisconnect.Location = new System.Drawing.Point(119, 131);
-            this.buttonDisconnect.Name = "buttonDisconnect";
-            this.buttonDisconnect.Size = new System.Drawing.Size(75, 23);
-            this.buttonDisconnect.TabIndex = 6;
-            this.buttonDisconnect.Text = "Przerwij";
-            this.buttonDisconnect.UseVisualStyleBackColor = true;
+            this.maskedTextBoxPassword.Location = new System.Drawing.Point(52, 94);
+            this.maskedTextBoxPassword.Name = "maskedTextBoxPassword";
+            this.maskedTextBoxPassword.Size = new System.Drawing.Size(142, 20);
+            this.maskedTextBoxPassword.TabIndex = 4;
+            // 
+            // textBoxLogin
+            // 
+            this.textBoxLogin.Location = new System.Drawing.Point(52, 56);
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.Size = new System.Drawing.Size(142, 20);
+            this.textBoxLogin.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Hasło:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Login:";
+            // 
+            // comboBoxServer
+            // 
+            this.comboBoxServer.FormattingEnabled = true;
+            this.comboBoxServer.Location = new System.Drawing.Point(6, 19);
+            this.comboBoxServer.Name = "comboBoxServer";
+            this.comboBoxServer.Size = new System.Drawing.Size(188, 21);
+            this.comboBoxServer.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.buttonSend);
+            this.groupBox2.Controls.Add(this.buttonDownload);
+            this.groupBox2.Location = new System.Drawing.Point(7, 199);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 103);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Opcje";
+            // 
+            // buttonDownload
+            // 
+            this.buttonDownload.Location = new System.Drawing.Point(52, 19);
+            this.buttonDownload.Name = "buttonDownload";
+            this.buttonDownload.Size = new System.Drawing.Size(75, 23);
+            this.buttonDownload.TabIndex = 0;
+            this.buttonDownload.Text = "Pobierz";
+            this.buttonDownload.UseVisualStyleBackColor = true;
+            // 
+            // buttonSend
+            // 
+            this.buttonSend.Location = new System.Drawing.Point(52, 58);
+            this.buttonSend.Name = "buttonSend";
+            this.buttonSend.Size = new System.Drawing.Size(75, 23);
+            this.buttonSend.TabIndex = 1;
+            this.buttonSend.Text = "Wyślij";
+            this.buttonSend.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -162,6 +185,7 @@
             this.Text = "MD FTP";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,6 +204,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxServer;
+        private System.Windows.Forms.Button buttonSend;
+        private System.Windows.Forms.Button buttonDownload;
     }
 }
 
