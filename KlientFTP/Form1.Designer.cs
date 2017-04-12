@@ -40,10 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxServer = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonDownload = new System.Windows.Forms.Button();
-            this.buttonSend = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -140,32 +137,12 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.buttonSend);
-            this.groupBox2.Controls.Add(this.buttonDownload);
             this.groupBox2.Location = new System.Drawing.Point(7, 199);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 103);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opcje";
-            // 
-            // buttonDownload
-            // 
-            this.buttonDownload.Location = new System.Drawing.Point(52, 19);
-            this.buttonDownload.Name = "buttonDownload";
-            this.buttonDownload.Size = new System.Drawing.Size(75, 29);
-            this.buttonDownload.TabIndex = 0;
-            this.buttonDownload.Text = "Pobierz";
-            this.buttonDownload.UseVisualStyleBackColor = true;
-            // 
-            // buttonSend
-            // 
-            this.buttonSend.Location = new System.Drawing.Point(52, 61);
-            this.buttonSend.Name = "buttonSend";
-            this.buttonSend.Size = new System.Drawing.Size(75, 29);
-            this.buttonSend.TabIndex = 1;
-            this.buttonSend.Text = "Wyślij";
-            this.buttonSend.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -185,7 +162,6 @@
             this.Text = "MD FTP";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,8 +180,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxServer;
-        private System.Windows.Forms.Button buttonSend;
-        private System.Windows.Forms.Button buttonDownload;
     }
 }
 
