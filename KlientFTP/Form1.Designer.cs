@@ -40,7 +40,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxServer = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -137,12 +139,22 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Location = new System.Drawing.Point(7, 199);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(194, 103);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opcje";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(5, 44);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -162,6 +174,7 @@
             this.Text = "MD FTP";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,6 +193,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxServer;
+        private System.Windows.Forms.Button button1;
     }
 }
 
