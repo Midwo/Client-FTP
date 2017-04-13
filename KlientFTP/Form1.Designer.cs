@@ -30,7 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.wybierzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonDisconnect = new System.Windows.Forms.Button();
             this.buttonConnect = new System.Windows.Forms.Button();
@@ -40,18 +43,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxServer = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonDownload = new System.Windows.Forms.Button();
             this.buttonSend = new System.Windows.Forms.Button();
+            this.buttonDownload = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBoxLocation = new System.Windows.Forms.TextBox();
             this.buttonLocation = new System.Windows.Forms.Button();
+            this.textBoxLocation = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBoxFtp = new System.Windows.Forms.TextBox();
-            this.buttonUpFolder = new System.Windows.Forms.Button();
             this.listBoxFtp = new System.Windows.Forms.ListBox();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.buttonUpFolder = new System.Windows.Forms.Button();
+            this.textBoxFtp = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -62,11 +65,28 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.wybierzToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(529, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(536, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // wybierzToolStripMenuItem
+            // 
+            this.wybierzToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripComboBox1});
+            this.wybierzToolStripMenuItem.Name = "wybierzToolStripMenuItem";
+            this.wybierzToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.wybierzToolStripMenuItem.Text = "Wybierz";
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
+            this.toolStripComboBox1.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox1_Click_1);
+            this.toolStripComboBox1.Click += new System.EventHandler(this.toolStripComboBox1_Click_1);
             // 
             // statusStrip1
             // 
@@ -75,9 +95,15 @@
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 347);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(529, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(536, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(45, 17);
+            this.toolStripStatusLabel1.Text = "Serwer:";
             // 
             // groupBox1
             // 
@@ -103,6 +129,7 @@
             this.buttonDisconnect.TabIndex = 6;
             this.buttonDisconnect.Text = "Przerwij";
             this.buttonDisconnect.UseVisualStyleBackColor = true;
+            this.buttonDisconnect.Click += new System.EventHandler(this.buttonDisconnect_Click);
             // 
             // buttonConnect
             // 
@@ -112,6 +139,7 @@
             this.buttonConnect.TabIndex = 5;
             this.buttonConnect.Text = "Połącz";
             this.buttonConnect.UseVisualStyleBackColor = true;
+            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
             // 
             // maskedTextBoxPassword
             // 
@@ -165,15 +193,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Opcje";
             // 
-            // buttonDownload
-            // 
-            this.buttonDownload.Location = new System.Drawing.Point(6, 19);
-            this.buttonDownload.Name = "buttonDownload";
-            this.buttonDownload.Size = new System.Drawing.Size(89, 63);
-            this.buttonDownload.TabIndex = 0;
-            this.buttonDownload.Text = "Pobierz";
-            this.buttonDownload.UseVisualStyleBackColor = true;
-            // 
             // buttonSend
             // 
             this.buttonSend.Location = new System.Drawing.Point(101, 19);
@@ -182,6 +201,17 @@
             this.buttonSend.TabIndex = 1;
             this.buttonSend.Text = "Wyślij";
             this.buttonSend.UseVisualStyleBackColor = true;
+            this.buttonSend.Click += new System.EventHandler(this.buttonSend_Click);
+            // 
+            // buttonDownload
+            // 
+            this.buttonDownload.Location = new System.Drawing.Point(6, 19);
+            this.buttonDownload.Name = "buttonDownload";
+            this.buttonDownload.Size = new System.Drawing.Size(89, 63);
+            this.buttonDownload.TabIndex = 0;
+            this.buttonDownload.Text = "Pobierz";
+            this.buttonDownload.UseVisualStyleBackColor = true;
+            this.buttonDownload.Click += new System.EventHandler(this.buttonDownload_Click);
             // 
             // groupBox3
             // 
@@ -189,28 +219,28 @@
             this.groupBox3.Controls.Add(this.textBoxLocation);
             this.groupBox3.Location = new System.Drawing.Point(7, 298);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(510, 42);
+            this.groupBox3.Size = new System.Drawing.Size(522, 42);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Lokalizacja";
             // 
-            // textBoxLocation
-            // 
-            this.textBoxLocation.Enabled = false;
-            this.textBoxLocation.Location = new System.Drawing.Point(6, 15);
-            this.textBoxLocation.Name = "textBoxLocation";
-            this.textBoxLocation.Size = new System.Drawing.Size(460, 20);
-            this.textBoxLocation.TabIndex = 0;
-            // 
             // buttonLocation
             // 
-            this.buttonLocation.Location = new System.Drawing.Point(472, 13);
+            this.buttonLocation.Location = new System.Drawing.Point(484, 13);
             this.buttonLocation.Name = "buttonLocation";
             this.buttonLocation.Size = new System.Drawing.Size(32, 23);
             this.buttonLocation.TabIndex = 1;
             this.buttonLocation.Text = "[...]";
             this.buttonLocation.UseVisualStyleBackColor = true;
             this.buttonLocation.Click += new System.EventHandler(this.buttonLocation_Click);
+            // 
+            // textBoxLocation
+            // 
+            this.textBoxLocation.Enabled = false;
+            this.textBoxLocation.Location = new System.Drawing.Point(6, 15);
+            this.textBoxLocation.Name = "textBoxLocation";
+            this.textBoxLocation.Size = new System.Drawing.Size(472, 20);
+            this.textBoxLocation.TabIndex = 0;
             // 
             // groupBox4
             // 
@@ -219,10 +249,30 @@
             this.groupBox4.Controls.Add(this.textBoxFtp);
             this.groupBox4.Location = new System.Drawing.Point(213, 30);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(304, 262);
+            this.groupBox4.Size = new System.Drawing.Size(316, 262);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Podgląd";
+            // 
+            // listBoxFtp
+            // 
+            this.listBoxFtp.FormattingEnabled = true;
+            this.listBoxFtp.Location = new System.Drawing.Point(7, 56);
+            this.listBoxFtp.Name = "listBoxFtp";
+            this.listBoxFtp.Size = new System.Drawing.Size(303, 199);
+            this.listBoxFtp.TabIndex = 3;
+            this.listBoxFtp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBoxFtp_KeyDown);
+            this.listBoxFtp.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxFtp_MouseDoubleClick);
+            // 
+            // buttonUpFolder
+            // 
+            this.buttonUpFolder.Location = new System.Drawing.Point(266, 17);
+            this.buttonUpFolder.Name = "buttonUpFolder";
+            this.buttonUpFolder.Size = new System.Drawing.Size(44, 23);
+            this.buttonUpFolder.TabIndex = 2;
+            this.buttonUpFolder.Text = "<UP>";
+            this.buttonUpFolder.UseVisualStyleBackColor = true;
+            this.buttonUpFolder.Click += new System.EventHandler(this.buttonUpFolder_Click);
             // 
             // textBoxFtp
             // 
@@ -230,29 +280,6 @@
             this.textBoxFtp.Name = "textBoxFtp";
             this.textBoxFtp.Size = new System.Drawing.Size(253, 20);
             this.textBoxFtp.TabIndex = 0;
-            // 
-            // buttonUpFolder
-            // 
-            this.buttonUpFolder.Location = new System.Drawing.Point(266, 17);
-            this.buttonUpFolder.Name = "buttonUpFolder";
-            this.buttonUpFolder.Size = new System.Drawing.Size(32, 23);
-            this.buttonUpFolder.TabIndex = 2;
-            this.buttonUpFolder.Text = "-->";
-            this.buttonUpFolder.UseVisualStyleBackColor = true;
-            // 
-            // listBoxFtp
-            // 
-            this.listBoxFtp.FormattingEnabled = true;
-            this.listBoxFtp.Location = new System.Drawing.Point(7, 56);
-            this.listBoxFtp.Name = "listBoxFtp";
-            this.listBoxFtp.Size = new System.Drawing.Size(291, 199);
-            this.listBoxFtp.TabIndex = 3;
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(45, 17);
-            this.toolStripStatusLabel1.Text = "Serwer:";
             // 
             // openFileDialog1
             // 
@@ -263,7 +290,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(529, 369);
+            this.ClientSize = new System.Drawing.Size(536, 369);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -272,10 +299,15 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "MD FTP";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -315,6 +347,8 @@
         private System.Windows.Forms.TextBox textBoxFtp;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem wybierzToolStripMenuItem;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
     }
 }
 
