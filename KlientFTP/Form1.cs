@@ -16,5 +16,11 @@ namespace KlientFTP
         {
             InitializeComponent();
         }
+
+        private void buttonLocation_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+                textBoxLocation.Text = folderBrowserDialog1.SelectedPath;
+        }
     }
 }
